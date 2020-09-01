@@ -3,9 +3,9 @@ import 'express-async-errors';
 import { getCustomRepository } from 'typeorm';
 import { parseISO } from 'date-fns';
 
-import AppointmentRepository from '../repositories/AppointmentsRepository';
-import CreateAppointmentService from '../services/CreateAppointmentService';
-import ensureAuthenticated from '../middlewares/ensureAuthenticated';
+import AppointmentRepository from '../../modules/appointments/infra/typeorm/repositories/AppointmentsRepository';
+import CreateAppointmentService from '../../modules/appointments/services/CreateAppointmentService';
+import ensureAuthenticated from '../../modules/users/infra/http/middlewares/ensureAuthenticated';
 
 const appointmentsRouter = Router();
 
